@@ -111,7 +111,7 @@ function startApp(){
                 message:"Please enter Engineer name:",
                 validate: answer => {
                     if (answer!== ""){
-                        return answer;
+                        return true;
                     }
                     return "Please enter Engineer's name!"
                 },
@@ -122,7 +122,7 @@ function startApp(){
                 message:"Please enter Engineer ID:",
                 validate: answer => {
                     if (answer!== ""){
-                        return answer;
+                        return true;
                     }
                     return "Please enter Engineer's ID!"
                 },
@@ -144,7 +144,7 @@ function startApp(){
                 message:"Please enter Engineer Github:",
                 validate: answer => {
                     if (answer!== ""){
-                        return answer;
+                        return true;
                     }
                     return "Please enter Engineer's Github!"
                 },
@@ -166,7 +166,7 @@ function startApp(){
                 message:"Please enter intern name:",
                 validate: answer => {
                     if (answer!== ""){
-                        return answer;
+                        return true;
                     }
                     return "Please enter intern's name!"
                 },
@@ -177,7 +177,7 @@ function startApp(){
                 message:"Please enter intern ID:",
                 validate: answer => {
                     if (answer!== ""){
-                        return answer;
+                        return true;
                     }
                     return "Please enter intern's ID!"
                 },
@@ -188,7 +188,7 @@ function startApp(){
                 message:"Please enter intern email:",
                 validate: answer => {
                     if (answer!== ""){
-                        return answer;
+                        return true;
                     }
                     return "Please enter intern's email!"
                 },
@@ -199,7 +199,7 @@ function startApp(){
                 message:"Please enter intern school:",
                 validate: answer => {
                     if (answer!== ""){
-                        return answer;
+                        return true;
                     }
                     return "Please enter intern's school!"
                 },
