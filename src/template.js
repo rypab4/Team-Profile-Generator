@@ -67,7 +67,7 @@ const createTeamProfile = team => {
                         <li class="list-group-item">ID:${engineer.getId()}</li>
                         <li class="list-group-item">Email: <a href=mailto: ${engineer.getEmail()}>${engineer.getEmail()}</a></li>
                         <li class="list-group-item">Github: <a
-                                href="https://github.com/${engineer.getGithub()}"></a>${engineer.getGithub()}</li>
+                                href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></li>
                     </ul>
                 </div>
             </div>
@@ -78,8 +78,8 @@ const createTeamProfile = team => {
         return `
             <div class="card intern" style="width: 20rem">
                 <div class="card-header text-center bg-warning">
-                    <h2 class="card-title">${intern.getRole()}</h2>
-                    <h3 class="card-subtitle">Intern</h3>
+                    <h2 class="card-title">${intern.getName()}</h2>
+                    <h3 class="card-subtitle">${intern.getRole()}</h3>
                 </div>
                 <div class="card-body">
                     <ul class="list-group">
