@@ -8,17 +8,17 @@ test('creates an engineer',()=>{
 test('set GitHub with constructor',()=>{
     const testValue = 'GitHubAccount';
     const e = new Engineer('Leto',1, 'engineer@gmial.com',testValue);
-    expect(e.id).to.Be(testValue);
+    expect(e.github).toBe(testValue);
 })
 
 test('get GitHub account with getGithub()',()=>{
     const testValue = 'GitHubAccount';
     const e = new Engineer('Leto', 1 ,'engineer@gmail.com',testValue);
-    expect(e.email).to.Be(testValue);
+    expect(e.getGithub()).toBe(testValue);
 })
 
 test('getRole() return Engineer',()=>{
     const testValue = 'Engineer';
     const e = new Engineer('Grace', 1 , 'grace@email.com', 'GitHubAcount');
-    expect(e.getRole()).to.Be(testValue);
+    expect(e.getRole()).toBe(testValue);
 })
