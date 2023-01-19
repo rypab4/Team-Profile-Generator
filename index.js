@@ -7,19 +7,25 @@ const jest = require('jest');
 //add constructors
 const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
-const Engineer = require('./lib/Employee');
+const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+
+
 
 const DIST_DIR = path.join(__dirname, 'dist');
 const outputPath = path.join(DIST_DIR, 'index.html');
 
 const render = require('./src/template.js');
-const { ADDRGETNETWORKPARAMS } = require('dns');
+
 
 const teamArray = [];
 const idArray = [];
 
+
+//Start App
 function startApp(){
+    
+    //Promp for manager
     function addManager(){
         console.log("Add team profile");
         inquirer.prompt([
