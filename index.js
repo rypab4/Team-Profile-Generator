@@ -37,12 +37,12 @@ function startApp(){
             {
                 type:"input",
                 name:"managerID",
-                message:"Enter team manager's ID: ",
+                message:"Enter team manager's Id: ",
                 validate: answer =>{
                     if(answer!== ""){
                         return true;
                     }
-                    return "Enter manager's ID again: " 
+                    return "Enter manager's Id again: " 
                 }
             },
             {
@@ -69,7 +69,7 @@ function startApp(){
             },
 
         ]).then(answers=>{
-            const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+            const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOfficeNumber);
             teamArray.push(manager);
             idArray.push(answers.managerId);
             addTeam();

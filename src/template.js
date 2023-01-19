@@ -1,5 +1,6 @@
 module.exports = team => {
-    return `<!DOCTYPE html>
+    return` 
+    <!DOCTYPE html>
     <html lang="en">
     
     <head>
@@ -46,7 +47,7 @@ const createTeamProfile = team => {
                 <div class="card-body">
                     <ul class="list-group">
                         <li class="list-group-item">ID: ${manager.getId()}</li>
-                        <li class="list-group-item">Email: <a href='mailto:${manager.getEmail()}>${manager.getEmail()}</a></li>
+                        <li class="list-group-item">Email: <a href=mailto:${manager.getEmail()}>${manager.getEmail()}</a></li>
                         <li class="list-group-item">Office number: ${manager.getOfficeNumber()}</li>
                     </ul>
                 </div>
@@ -54,7 +55,7 @@ const createTeamProfile = team => {
             `;
     };
     //Create Engineer Profile
-    const createEngineProfile = engineer => {
+    const createEngineerProfile = engineer => {
         return `
             <div class="card engineer" style="width: 20rem">
                 <div class="card-header text-center bg-info-subtle">
@@ -64,7 +65,7 @@ const createTeamProfile = team => {
                 <div class="card-body">
                     <ul class="list-group">
                         <li class="list-group-item">ID:${engineer.getId()}</li>
-                        <li class="list-group-item">Email: <a href='mailto: ${engineer.getEmail()}'>${engineer.getEmail()}</a></li>
+                        <li class="list-group-item">Email: <a href=mailto: ${engineer.getEmail()}'>${engineer.getEmail()}</a></li>
                         <li class="list-group-item">Github: <a
                                 href="https://github.com/${engineer.getGitHub()}"></a>${engineer.getGitHub()}</li>
                     </ul>
@@ -83,7 +84,7 @@ const createTeamProfile = team => {
                 <div class="card-body">
                     <ul class="list-group">
                         <li class="list-group-item">ID:${intern.getId()}</li>
-                        <li class="list-group-item">Email: <a href='mailto: ${intern.getEmail()}'>${intern.getEmail()}</a></li>
+                        <li class="list-group-item">Email: <a href=mailto: ${intern.getEmail()}'>${intern.getEmail()}</a></li>
                         <li class="list-group-item">School: ${intern.getSchool()}</li>
                     </ul>
                 </div>
@@ -98,12 +99,12 @@ const createTeamProfile = team => {
         );
     html.push(team
         .filter(employee => employee.getRole() === 'Engineer')
-        .map(engineer => createEngineProfile(engineer))
+        .map(engineer => createEngineerProfile(engineer))
         .join('')
         );
     html.push(team
         .filter(employee => employee.getRole() === 'Intern')
-        .map(employee => createInternProfile(intern))
+        .map(intern => createInternProfile(intern))
         .join('')
         );
     return html.join('');
